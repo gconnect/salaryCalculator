@@ -1,0 +1,45 @@
+.bod {
+    background-image: url("images/blue.jpg");
+    background-size : 100%;
+
+
+}
+.nav-ul li{
+  color: blue;
+  
+}
+
+#header h1 {
+    color: white;
+    text-align: center;
+}
+
+hi{
+    background: white;
+    font-size: 25px;
+}
+.labelo{
+    color: blue;
+    background: white;
+
+}
+.al{
+    background: blue;
+    color: white;
+}
+.hui {
+    color: blue;
+    background: white;
+    margin-top: 15%;
+    border: dotted;
+}
+.shh {
+    margin-left: 15px;
+}
+.jik {
+    margin: 110px;
+    background: blue;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
