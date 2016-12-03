@@ -1,61 +1,117 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Salary Calculator</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-	<body>
-		<div class="form-style-8">
-			<center>
-				<table>
-					<tr>
-						<td><h2>Salary Calculator</h2></td>
-					</tr>
-				</table>
-				
-			<form action ="salarycalculator.js">
-				<p>
-				Name: <input type="text" name="field2" placeholder="Name" />
-				<br></p>
-				<p>
-				Category: 
-				  <option value="interns">Interns</option>
-				  <option value="associates">Associates </option>
-				  <option value="managers">Managers</option>
-				  <option value="executives">Executives</option>
-				  <option value= "directors">Directors</option>
-				<br></p>
-				<p>
-				Base Salary: <input type ="number" name="field4" placeholder="Base Salary" />
-				<br></p>
-				<p>
-				Increment: <input type ="text" name="field4" placeholder="Increment" />
-				<br></p>
-				<p>
-				Time Duration: <select name="cars">
-				  <option value= 1>1 month </option>
-				  <option value=2>2 month </option>
-				  <option value=3>3 month</option>
-				  <option value=4>4 month</option>
-				  <option value= 5>5 month </option>
-				  <option value=6>6 month </option>
-				  <option value=7>7 month</option>
-				  <option value=8>8 month</option>
-				  <option value=9>9 month</option>
-				  <option value=10>10 month</option>
-				  <option value=11>11 month</option>
-				  <option value=12>12 month</option>
+ <html>
+ <head>
+ 	<title>Salary Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+ </head>
+ 	<body>
+ 		
+ 			
+ 		<div class="container">
+ 			<div class="row calc-row">
+ 				<div class= "col-sm-5 col-sm-offset-1 add-bm">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h1>Calculate Salary</h1>
+              </div>
+              <div  class="panel-body">
+                  <form class="form-horizontal pad">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="field2" placeholder="Name" id="nameinput" required />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="cat" name="category" required>
+                                <option value="">Select category</option>
+                                 <option value="interns">Interns</option>
+                                  <option value="associates">Associates </option>
+                                  <option value="managers">Managers</option>
+                                  <option value="executives">Executives</option>
+                                  <option value= "directors">Directors</option>
+                            </select>
+                        </div>
 
+                        <div class="form-group">
+                            <label>Basic Salary</label>
+                            <input type="number" class="form-control" id="basic-salary" value="100000"/>
+                        </div>
 
-				    </select></p>
-				    <br>
+                        <div class="form-group">
+                            <label>Increment</label>
+                            <input type="text" class="form-control" id="increment" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <select class="form-control" id="time" name="experience" required>
+                                <option value="">Duration</option>
+                                <option value=1>1 month </option>
+                                <option value=2>2 month </option>
+                                  <option value=3>3 month</option>
+                                  <option value=4>4 month</option>
+                                  <option value=5>5 month </option>
+                                  <option value=6>6 month </option>
+                                  <option value=7>7 month</option>
+                                  <option value=8>8 month</option>
+                                  <option value=9>9 month</option>
+                                  <option value=10>10 month</option>
+                                  <option value=11>11 month</option>
+                                  <option value=12>12 month</option>
+ 
+                            </select>
+                        </div>
+                    </form>
+              </div>
+            </div>
+ 					
+ 					<button id="generate" class="btn btn-primary btn-lg" onclick="salaryCal()">Generate</button>
+				</div><!-- right column -->
+					<div class="col-sm-5">
+	 					<div class="panel panel-default">
+	 						<div class="panel-heading">
+	 							<h1>Income Statement</h1>
+	 						</div>
+	 						<div class="panel-body">
+	 							<ul class="remove-bullet">
+									<li class="list-group">Name: <span class="inline" id="name"></span></li>
+									<li class="list-group">Category: <span class="inline" id="category"></span></li>
+									<li class="list-group">Basic: <span class="inline" id="salary"></span></li>
+									<li class="list-group">Increment: <span class="inline" id="increment"></span></li>
+									<li class="list-group">Duration: <span class="inline" id="time"></span></li>
+								</ul>
+	 						</div>
+	 						<div class="panel-footer">
+                <span class="label label-success">Total Income <span class="badge" id="totalSalary"></span></span>
+	 							
+	 						</div>
+	 					</div>
+ 					</div><!-- last column -->
+						
+					
+ 				</div><!-- row -->
+ 				
+ 			</div><!-- container -->
+ 		
+ 		
+ 		
+ 				
+ 				
+  
+	 
 
+ 
 
-				<input type="submit" value="Generate" />
+ 	<script type="text/javascript" src = "salarycalculator.js"></script>
 
-			</center>
-			
-			</form>
-		</div>
-	</body>
-</html>
+    <!-- <script>
+
+      function myFunction() {
+        var salary = document.getElementById("basic-salary").value;
+        var increment= document.getElementById("increment").value;
+        var income = Number(salary) + Number(increment);
+        document.getElementById("totalSalary").innerHTML = income;
+      }
+    </script> -->
+ 		
+ 	</body>
+ </html> 
